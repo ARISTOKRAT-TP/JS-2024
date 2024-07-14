@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    }
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: rgb(194, 204, 236) ;
+    padding-top:300px;
+    text-align: center;
+}
+
+h1{
+    text-align: center; 
+}
+.form{
+    padding-top: 10px;
+    width: 150px;
+    margin-bottom: 10px;
+    padding-left: 46%;
+}
+.input_num {
+    padding-top: 10px;
+    width: 150px;
+    margin-right: 10px;
+}
+  
+.num_from_button {
+    padding: 10px;
+}

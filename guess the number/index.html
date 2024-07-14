@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title> Угадай число </title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <h1>Игра "Угадай число"</h1>
+        <p>
+            Мы загадали случайное число от 0 до 100. Попытайтесь его угадать.
+        </p>
+    
+        <div class = "form">
+            <label for="guess">
+                Введите число:
+            </label>
+            <input type="text" class="input_num">
+            <button class="num_from_button">Проверить</button>
+        </div>
+
+        <div class="result">
+            <div class="result_check">
+                <span class="check">Результат:</span>
+                <span class="check_out"></span>
+            </div>
+
+            <div class="result_help">
+                <span class="help">Подсказка:</span>
+                <span class="help_out"></span>
+            </div>
+
+            <div class="result_count">
+                <span class="count">Число попыток:</span>
+                <span class="count_out"></span>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
