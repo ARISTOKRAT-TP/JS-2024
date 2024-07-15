@@ -1,0 +1,28 @@
+{
+    "categories" : [
+        {
+            "name": "Процессоры",
+            "link": "processors"
+        }, 
+        {
+            "name": "Видеокарты",
+            "link": "graphics-cards"
+        },
+        {
+            "name": "Материнские платы",
+            "link": "motherboards"
+        },
+        {
+            "name": "Оперативная память",
+            "link": "ram"
+        },
+        {
+            "name": "Корпуса",
+            "link": "cases"
+        },
+        {
+            "name": "Блоки питания",
+            "link": "power-supplies"
+        }
+    ]
+}

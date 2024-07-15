@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Каталог товаров</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/1.css">
+</head>
+
+<body>
+
+    <header>Каталог товаров</header>
+
+    <nav>
+        <div>
+            <ul>
+                <li><a href="/">Главная страница</a></li>
+                <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <nav>
+            <div>
+                <ul>
+                {{#each categories}}
+                    <li><a href="{{this.link}}">{{this.name}}</a></li>
+                {{/each}}</ul>
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        <footer>
+            <hr>
+            <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
+        </footer>
+    </div>
+
+</body>
+</html>
