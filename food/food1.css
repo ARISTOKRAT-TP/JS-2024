@@ -1,0 +1,107 @@
+body {
+}
+.navbar {
+    background-color:#131313
+}
+.container-fluid {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    overflow-x: hidden; 
+    margin-top: 0;
+}
+.navbar-brand {
+    margin-left: 5%;
+}
+.d-flex {
+    margin-right: 5%;
+}
+.mynavbar1 {
+    padding-left: 2.5%;
+}
+.nav-item {
+    margin: 2.5%;
+}
+#btn1 {
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    color:#000000;
+    border: 1px solid #ffffff;
+}
+#search1 {
+    border-radius: 20px;
+    border: 1px solid #000000;
+}
+.t1 {
+    font-size: 100px;
+    margin-bottom: -25px;
+}
+.t2 {
+    font-size: 150px;
+    margin-top: -25px;
+}
+.t3 {
+    font-size: 100px;
+}
+.front {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* Скрыть часть картинки, которая выходит за пределы контейнера */
+    width: 50%; /* Установить ширину контейнера равной половине экрана */
+    position: relative; /* Устанавливаем позиционирование относительно родительского элемента */
+    width: 100vw; /* Установить ширину контейнера в ширину экрана */
+    overflow-x: hidden; /* Скрыть горизонтальную прокрутку для контейнера */
+    margin-top: -5%;
+    
+}
+
+.front-text {
+    flex: 1;
+    margin-top: 15%;
+    margin-left: 5%;
+    color:#ffffff
+}
+
+.front-photo {
+    margin-right:-25%;
+}
+
+.photo1 {
+    width: 200%; /* задаем ширину изображения в 80% от родительского контейнера */
+    height: auto; /* автоматическое расчет высоты для сохранения пропорций */
+    max-width: 100%; /* устанавливаем максимальную ширину изображения */
+    display: block; /* делаем изображение блочным элементом */
+    margin-left: 5%; /* Задаем негативный отступ для перемещения картинки влево */
+    margin-top: -5%;
+    
+}
+.fon {
+    background-image: url("imges/1.jpg");
+}
+.cards {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.gordon {
+    width: 110%;
+}
+.front-photo2 {
+    padding-top: 14%;
+    padding-bottom: 10%;
+    padding-left: 15%;
+}
+.front-text2 {
+    color: #ffffff;
+    padding-top: 20%;
+    padding-left: 12%;
+}
+#shef {
+    font-size: 400%;
+}
+.photos {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.imgPack {
+    transform: translateX(200%); /* Перемещаем изображения вправо на 700 пикселей */
+}
