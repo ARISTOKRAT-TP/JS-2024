@@ -29,10 +29,6 @@
   animation-duration: 5s;
 }
 
-h1 {
-  font-family: monospace;
-}
-
 /* Keyframes for background animation */
 @keyframes slide {
   0% {
@@ -43,9 +39,6 @@ h1 {
       transform: translateX(25%);
   }
 }
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 /* Body styling */
 body {
@@ -83,6 +76,7 @@ body {
   padding: 30px 0 0 0;
 }
 
+/* Form row styling */
 .container form .form-row {
   display: flex;
   margin: 32px 0;
@@ -96,6 +90,7 @@ form .form-row .input-data {
   position: relative;
 }
 
+/* Textarea styling */
 form .form-row .textarea {
   height: 70px;
 }
@@ -109,26 +104,6 @@ form .form-row .textarea {
   border: none;
   font-size: 17px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-}
-
-/* Styling for the "Data" button */
-.data-btn {
-  background-color: #6c3;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 20px 0;
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-
-.data-btn:hover {
-  background-color: #56a320;
 }
 
 /* Label transformations for focus and valid states */
@@ -154,6 +129,7 @@ form .form-row .textarea {
   transition: all 0.3s ease;
 }
 
+/* Textarea label styling */
 .textarea label {
   width: 100%;
   bottom: 40px;
@@ -168,6 +144,7 @@ form .form-row .textarea {
   width: 100%;
 }
 
+/* Underline before element styling */
 .input-data .underline:before {
   position: absolute;
   content: "";
@@ -179,6 +156,7 @@ form .form-row .textarea {
   transition: transform 0.3s ease;
 }
 
+/* Underline transform on focus and valid states */
 .input-data input:focus ~ .underline:before,
 .input-data input:valid ~ .underline:before,
 .textarea textarea:focus ~ .underline:before,
@@ -186,12 +164,13 @@ form .form-row .textarea {
   transform: scale(1);
 }
 
-/* Submit button styling */
+/* Submit button container styling */
 .submit-btn {
   display: flex;
   justify-content: center; /* Center alignment */
 }
 
+/* Submit button inner container styling */
 .submit-btn .input-data {
   overflow: hidden;
   height: 45px !important;
@@ -210,6 +189,7 @@ form .form-row .textarea {
   transition: all 0.4s;
 }
 
+/* Inner element transition on hover */
 .submit-btn .input-data:hover .inner {
   left: 0;
 }
@@ -226,6 +206,32 @@ form .form-row .textarea {
   cursor: pointer;
   position: relative;
   z-index: 2;
+}
+
+/* Styling for the "Data" button */
+.data-btn {
+  background-color: #6c3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Hover effect for "Data" button */
+.data-btn:hover {
+  background-color: #56a320;
+}
+
+/* Contact item margin */
+.contact-item {
+  margin-bottom: 20px;
 }
 
 /* Media query for responsiveness */
@@ -248,5 +254,10 @@ form .form-row .textarea {
 
   .submit-btn .input-data {
       width: 40% !important;
+  }
+
+  .data-btn {
+      width: auto;
+      padding: 10px;
   }
 }
