@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             } else {
                 // If no data is found, display a message
-                contactDataDiv.innerHTML = '<p>No data to display</p>';
+                contactDataDiv.innerHTML = '<p>Данные отсустствуют</p>';
             }
         })
         .catch(error => console.error('Error:', error)); // Log any errors that occur during fetch
