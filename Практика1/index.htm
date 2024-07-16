@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация</title>
+    <style>
+        body {
+            background-image: url("5.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+			
+
+        }
+        .backgroundGif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("background.gif");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+        .topText {
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            text-align: center;
+            color: white;
+            font-size: 8em;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+        }
+        .topText:hover {
+            animation: pulseAnimation 1s infinite;
+        }
+        .mon1 {
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 80%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            margin-top: 22.5vh;
+            margin-bottom: 5vh;
+            position: absolute;
+            left: -100%;
+            transition: left 0.5s ease;
+            z-index: 2;
+        }
+        .mon2 {
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 30%;
+            border-radius: 20px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            font-size: 2em;
+            bottom: 50vh;
+            transition: bottom 0.5s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+        .mon2:hover #quizText {
+            animation: pulseAnimation 1s infinite;
+        }
+        .mon1.show {
+            left: 10%;
+        }
+        .mon1.show + .mon2 {
+            bottom: 10vh;
+        }
+        .monPaj {
+            height: 100%;
+            width: 100%;
+            max-width: 500px;
+            background-image: url("1.png");
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+        .textMAKAK {
+            height: 500px;
+            margin-left: 5%;
+            margin-right: 5%;
+            max-width: 850px;
+            color: white;
+            font-size: 25px;
+        }
+        .textMAKAK span {
+            cursor: pointer;
+            user-select: none;
+        }
+        .textMAKAK span:hover {
+            animation: pulseAnimation 1s infinite;
+        }
+        @keyframes pulseAnimation {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .monPaj:hover {
+            transform: scale(0.8);
+        }
+        @keyframes swingAnimation {
+            0% { transform: rotate(0) scale(0.8); }
+            25% { transform: rotate(5deg) scale(0.8); }
+            50% { transform: rotate(-5deg) scale(0.8); }
+            75% { transform: rotate(3deg) scale(0.8); }
+            100% { transform: rotate(0) scale(0.8); }
+        }
+        .additionalText {
+            display: none;
+            color: white;
+            font-size: 15px;
+            margin-top: 20px;
+            text-align: left;
+            opacity: 0;
+        }
+        @keyframes textAnimationShow {
+            0% { opacity: 0; font-size: 15px; }
+            100% { opacity: 1; font-size: 25px; }
+        }
+        @keyframes textAnimationHide {
+            0% { opacity: 1; font-size: 25px; }
+            100% { opacity: 0; font-size: 15px; }
+        }
+@keyframes showQuiz {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.quizOpros.show {
+    opacity: 1;
+    visibility: visible;
+    animation: showQuiz 0.5s forwards;
+}
+.opas {
+    animation: hideElements 1s forwards;
+    opacity: 1;
+}
+.quizOpros {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Начальное состояние - элемент прозрачен */
+    visibility: hidden; /* Начальное состояние - элемент скрыт */
+    transition: opacity 0.5s, visibility 0.5s;
+	color: white;
+}
+    .quizQuestion {
+        margin-bottom: 20px;
+    }
+    .quizQuestion h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .quizAnswers {
+        display: flex;
+        flex-direction: column;
+    }
+    .quizAnswers label {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .quizAnswers label:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+.quizAnswers input[type="radio"] {
+    display: none;
+}
+.quizAnswers input[type="radio"]:checked + label {
+    background-color: rgba(0, 255, 0, 0.5); /* Зеленая подсветка для правильного ответа */
+}
+.quizAnswers input[type="radio"]:checked:not([data-correct]) + label {
+    background-color: rgba(255, 0, 0, 0.5); /* Красная подсветка для неправильного ответа */
+}
+.quizOpros.show {
+		opacity: 1;
+		visibility: visible;
+	}
+	@keyframes hideElements {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="backgroundGif"></div>
+    <div class="topText" onclick="toggleInfo()">Читать О макаках</div>
+    
+    <div class="mon1" id="infoBlock">
+        <div class="monPaj" onclick="swingImage()" onmouseover="toggleImageSize()" onmouseout="resetImageSize()"></div>
+        <div class="textMAKAK">
+            <p>
+                Мака́ки — род приматов из семейства мартышковых, состоящий из 21 вида, большинство из которых обитают в Азии.
+            </p>
+            <p><span onclick="toggleAdditionalText()">Подробнее...</span></p>
+            <div class="additionalText" id="additionalText">
+                Макаки — приматы средней величины с крепким туловищем и сильными конечностями. Их густая шерсть окрашена в серо-коричневый цвет, однако порою бывает и чёрной. На продолговатой морде волосяной покров отсутствует. У некоторых видов на голове имеются заметные «шапки» либо своеобразные бороды. Важным отличительным признаком является длина хвоста: у маготов он полностью отсутствует, у некоторых видов он куцый, а у остальных почти такой же длинный, как всё туловище. Длина тела у макак достигает 80 см, а масса колеблется от 6 до 15 кг. Самцы в среднем в два раза тяжелее самок.
+            </div>
+        </div>
+    </div>
+    
+    <div class="mon2" id="quizBlock" onclick="expandQuizBlock()">
+        <p id="quizText">НАЧАТЬ ВИКТОРИНУ</p>
+    </div>
+	
+<div class="quizOpros" id="quizOpros">
+
+<div class="quizQuestion">
+    <h3>Вопрос 1: К какому семейству относятся макаки?</h3>
+    <div class="quizAnswers">
+        <input type="radio" id="q1a1" name="q1" value="a1" data-correct>
+		<label for="q1a1">Семейство мартышковых</label>
+        
+        <input type="radio" id="q1a2" name="q1" value="a2">
+		<label for="q1a2">Семейство кошачьих</label>
+
+		<input type="radio" id="q1a3" name="q1" value="a3">
+		<label for="q1a3">Семейство крыс</label>
+
+    </div>
+</div>
+
+    
+<div class="quizQuestion">
+    <h3>Вопрос 2: Где обитают большинство видов макак?</h3>
+    <div class="quizAnswers">
+        <input type="radio" id="q2a1" name="q2" value="a1" data-correct>
+        <label for="q2a1" data-correct>В Азии</label >
+        
+        <input type="radio" id="q2a2" name="q2" value="a2">
+        <label for="q2a2">В Африке</label>
+        
+        <input type="radio" id="q2a3" name="q2" value="a3">
+        <label for="q2a3">В Южной Америке</label>
+    </div>
+</div>
+
+    
+<div class="quizQuestion">
+    <h3>Вопрос 3: Каковы основные отличительные черты макак?</h3>
+    <div class="quizAnswers">
+        <input type="radio" id="q3a1" name="q3" value="a1">
+        <label for="q3a1">Густая шерсть и длинный хвост</label>
+        
+        <input type="radio" id="q3a2" name="q3" value="a2">
+        <label for="q3a2">Отсутствие хвоста и чёрный цвет шерсти</label>
+        
+        <input type="radio" id="q3a3" name="q3" value="a3" data-correct>
+        <label for="q3a3" data-correct>Заметные "шапки" на голове и длинные уши</label>
+    </div>
+</div>
+
+</div>
+
+    
+<script>
+    var originalTransform = '';
+
+    // Функция для уменьшения размера изображения
+    function toggleImageSize() {
+        var monPaj = document.querySelector('.monPaj');
+        originalTransform = monPaj.style.transform; // Сохраняем текущее значение transform
+        monPaj.style.transform = 'scale(0.8)'; // Устанавливаем масштаб 0.8
+    }
+    
+    // Функция для восстановления исходного размера изображения
+    function resetImageSize() {
+        var monPaj = document.querySelector('.monPaj');
+        monPaj.style.transform = originalTransform; // Восстанавливаем исходное значение transform
+    }
+    
+    // Функция для анимации качели изображения
+    function swingImage() {
+        var monPaj = document.querySelector('.monPaj');
+        monPaj.style.animation = 'swingAnimation 0.5s ease'; // Запускаем анимацию swingAnimation
+        setTimeout(function() {
+            monPaj.style.animation = ''; // Очищаем анимацию после 0.5 секунды
+        }, 500);
+    }
+
+    // Функция для переключения дополнительного текста
+    function toggleAdditionalText() {
+        var additionalText = document.getElementById('additionalText');
+        if (additionalText.style.display === 'block') {
+            // Если текст отображается, скрываем его с анимацией
+            additionalText.style.animation = 'textAnimationHide 0.5s forwards';
+            setTimeout(function() {
+                additionalText.style.display = 'none';
+            }, 500);
+        } else {
+            // Если текст скрыт, показываем его с анимацией
+            additionalText.style.display = 'block';
+            additionalText.style.animation = 'textAnimationShow 0.5s forwards';
+        }
+    }
+
+    // Функция для переключения информационного блока
+    function toggleInfo() {
+        var infoBlock = document.getElementById('infoBlock');
+        var quizBlock = document.getElementById('quizBlock');
+        if (infoBlock.classList.contains('show')) {
+            // Если информационный блок показан, скрываем его
+            infoBlock.classList.remove('show');
+            quizBlock.style.bottom = '50vh';
+        } else {
+            // Если информационный блок скрыт, показываем его
+            infoBlock.classList.add('show');
+            quizBlock.style.bottom = '10vh';
+        }
+    }
+
+    // Функция для удаления элементов и показа викторины
+    function removeElements() {
+        var body = document.querySelector('body');
+        var elementsToHide = body.children;
+
+        // Перебираем все элементы в body, кроме викторины, и скрываем их
+        for (var i = 0; i < elementsToHide.length; i++) {
+            var element = elementsToHide[i];
+            if (element !== document.querySelector('.quizOpros') || element !== document.querySelector('.backgroundGif')) {
+                element.classList.add('opas'); // Добавляем класс, который делает элемент невидимым
+            }
+        }
+
+        // Показываем викторину после исчезновения элементов
+        setTimeout(function() {
+            var quizOpros = document.getElementById('quizOpros');
+            quizOpros.classList.remove('opas'); // Убираем класс, который делает викторину видимой
+            quizOpros.classList.add('show'); // Добавляем класс, чтобы показать викторину
+        }, 1500); // Подождать 1.5 секунды после скрытия элементов
+    }
+
+    // Функция для расширения блока с викториной
+    function expandQuizBlock() {
+        var quizBlock = document.getElementById('quizBlock');
+        quizBlock.style.animation = 'pulseAnimation 0.5s infinite'; // Запускаем анимацию pulseAnimation
+        
+        setTimeout(function() {
+            quizBlock.style.animation = ''; // Очищаем анимацию после 1.5 секунды
+            removeElements(); // Вызываем функцию для удаления элементов и показа викторины
+
+            // Скрываем элемент с классом topText
+            var topText = document.querySelector('.topText');
+            topText.style.display = 'none';
+
+            // Скрываем блок с классом mon2
+            var mon2 = document.querySelector('.mon2');
+            mon2.style.display = 'none';
+
+            // Скрываем блок с классом mon1
+            var mon1 = document.querySelector('.mon1');
+            mon1.style.display = 'none';
+        }, 1500);
+    }
+
+    // Обработчик события при загрузке DOM
+    document.addEventListener('DOMContentLoaded', function() {
+        var quizQuestions = document.querySelectorAll('.quizQuestion');
+
+        // Функция для подсчета правильных ответов при изменении выбора в викторине
+        function calculateScore() {
+            var totalQuestions = quizQuestions.length;
+            var correctAnswers = 0;
+
+            quizQuestions.forEach(function(question) {
+                var radioButtons = question.querySelectorAll('input[type="radio"]');
+                radioButtons.forEach(function(radio) {
+                    if (radio.checked) {
+                        var label = radio.nextElementSibling;
+                        if (radio.hasAttribute('data-correct')) {
+                            label.style.backgroundColor = 'rgba(0, 255, 0, 0.5)'; // Правильный ответ
+                            correctAnswers++;
+                        } else {
+                            label.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Неправильный ответ
+                        }
+                    }
+                });
+            });
+
+            // Выводим результат в консоль или можно вставить другой код для отображения результата
+            console.log('Количество правильных ответов: ' + correctAnswers + ' из ' + totalQuestions);
+        }
+
+        // Назначаем обработчики событий на радио-кнопки для каждого вопроса в викторине
+        quizQuestions.forEach(function(question) {
+            var radioButtons = question.querySelectorAll('input[type="radio"]');
+            radioButtons.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    calculateScore(); // Вызываем функцию calculateScore при изменении выбора
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
