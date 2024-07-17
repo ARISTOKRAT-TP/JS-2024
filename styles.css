@@ -1,0 +1,148 @@
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 120vh;
+    justify-content: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between; /* Разделение содержимого по краям */
+}
+
+nav {
+    margin-left: auto; /* Сдвиг nav вправо */
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.contact-form .form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .form-group button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .form-group button:disabled {
+    background-color: #ccc;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.slider-container {
+    width: 300px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+input[type=range] {
+    width: 100%;
+}
+
+.output-value {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.contact-form .form-group input, .contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}
