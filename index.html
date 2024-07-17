@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>3D Models Order</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#order">Заказать 3D-модель</a></li>
+                <li><a href="#contact">Контакты &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+          <br></br>
+            <h2>Добро пожаловать в нашу службу заказа 3D-моделей</h2>
+            <p>Мы предоставляем индивидуальные 3D-модели для всех ваших нужд!</p>
+        </section>
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы - команда опытных 3D-моделистов, предлагающих высококачественные 3D-модели для различных применений.</p>
+        </section>
+        <section id="order">
+            <h2>Заказать 3D-модель</h2>
+            <html lang="en">
+
+<head>
+    <title>Контактная форма</title>
+</head>
+
+    </div>
+<div class="contact-form">
+    <h2>контактная форма</h2>
+    <form id="contact-form" novalidate>
+        <div class="form-group">
+          <b>  <label for="name">Ваше имя:</label> </b>
+            <input type="text" id="name" name="name" required>
+            <div class="error-message" id="name-error"></div>
+        </div>
+        <div class="form-group">
+          <b>  <label for="email">Ваш email:</label> </b>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="email-error"></div>
+        </div>
+        <div class="form-group">
+          <b>  <label for="message">Описание заказа:</label> </b>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="error-message" id="message-error"></div>
+        </div>
+        <div class="form-group">
+
+</head>
+<body>
+
+<div class="slider-container">
+
+    <b> <label for="budgetRange">Выберите бюджет: </label> </b>
+    <input type="range" id="budgetRange" min="1" max="2500" value="50" oninput="updateValue(this.value)">
+    <div class="output-value" id="output">50$</div>
+</div>
+
+<script>
+    // Функция для обновления отображаемого значения
+    function updateValue(value) {
+        document.getElementById('output').textContent = value + '$';
+    }
+</script>
+            <div class="error-message" id="budget-error"></div>
+        </div>
+
+
+        <div class="form-group">
+                    <b> <label>Полигональность модели:</label> </b>
+                    <div>
+                        <label>
+                            <input type="radio" name="polygon" value="high" required> Высокополигональная
+                        </label>
+                        <label>
+                            <input type="radio" name="polygon" value="average" required> Среднеполигональная
+                        </label>
+                        <label>
+                            <input type="radio" name="polygon" value="low"> Низкополигональная
+                        </label>
+                    </div>
+                    <div class="error-message" id="polygon-error"></div>
+                </div>
+
+
+        <div class="form-group">
+          <b>  <label for="model-type">Тип модели:</label> </b>
+            <select id="model-type" name="model-type" required>
+                <option value="">Выберите тип модели</option>
+                <option value="interior">Интерьерная модель</option>
+                <option value="3d-print">Модель для 3D печати</option>
+                <option value="game">Модель для игры</option>
+            </select>
+            <div class="error-message" id="model-type-error"></div>
+        </div>
+
+        <style>
+    /* Начальные стили для кнопки */
+    .color-button {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="form-group">
+    <button type="submit" class="color-button" onclick="changeColor()">Отправить</button>
+</div>
+
+<script>
+        function changeColor() {
+            var button = document.querySelector(".color-button"); // Получаем элемент кнопки
+            var originalColor = button.style.backgroundColor; // Сохраняем исходный цвет
+
+            // Меняем цвет кнопки на зеленый
+            button.style.backgroundColor = "green";
+
+            // Возвращаем исходный цвет через одну секунду
+            setTimeout(function() {
+                button.style.backgroundColor = originalColor;
+            }, 100);
+        }
+</script>
+
+</body>
+        </section>
+        <section id="contact">
+            <h2>Связаться с нами</h2>
+            <p>Если у вас есть какие-либо вопросы, не стесняйтесь обращаться к нам по <a href="mailto:haastamusicorum@gmail.com">электронной почте</a> или в <a href="https://web.telegram.org/a/#1684074587">Telegram </a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 3D Models Order. Все права защищены.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
