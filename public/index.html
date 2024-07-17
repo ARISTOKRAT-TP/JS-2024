@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактная форма</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>&bull; Feedback form &bull;</h1>
+        <div class="underline"></div>
+        <div class="icon_wrapper">
+            <img class="icon" src="img/image1.png" alt="Icon">
+        </div>
+        <form action="/submit-form" method="post" id="contact_form">
+            <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="Name" name="name" id="name_input" required>
+            </div>
+            <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="e-mail" name="email" id="email_input" required>
+            </div>
+            <div class="telephone">
+                <label for="telephone"></label>
+                <input type="text" placeholder="number" name="telephone" id="telephone_input" required>
+            </div>
+            <div class="country">
+                <label for="country"></label>
+                <select name="country" id="country_input" required>
+                    <option disabled hidden selected>Country</option>
+                    <option>Russia</option>
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Germany</option>
+                    <option>France</option>
+                    <option>Italy</option>
+                    <option>Spain</option>
+                    <option>China</option>
+                    <option>Japan</option>
+                    <option>Australia</option>
+                    <option>India</option>
+                    <option>Brazil</option>
+                    <option>Mexico</option>
+                    <option>South Africa</option>
+                    <option>Argentina</option>
+                    <option>Netherlands</option>
+                    <option>Switzerland</option>
+                    <option>Sweden</option>
+                    <option>Norway</option>
+                    <option>Finland</option>
+                    <option>Denmark</option>
+                    <option>Belgium</option>
+                    <option>Austria</option>
+                    <option>New Zealand</option>
+                    <option>South Korea</option>
+                    <option>Singapore</option>
+                </select>
+            </div>
+            <div class="message">
+                <label for="message"></label>
+                <textarea name="message" placeholder="message" id="message_input" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Send Message" id="form_button">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
