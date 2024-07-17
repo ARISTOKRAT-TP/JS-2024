@@ -6,33 +6,47 @@
         <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
-        <h1>Игра "Угадай число"</h1>
-        <p>
-            Мы загадали случайное число от 0 до 100. Попытайтесь его угадать.
-        </p>
-    
-        <div class = "form">
-            <label for="guess">
-                Введите число:
-            </label>
-            <input type="text" class="input_num">
-            <button class="num_from_button">Проверить</button>
-        </div>
+        <script src="js/parallax.js"></script>
 
-        <div class="result">
-            <div class="result_check">
-                <span class="check">Результат:</span>
-                <span class="check_out"></span>
-            </div>
+        <div class="parallax background-space" id="background-space"></div>
+        <div class="parallax background-tree" id="background-tree"> </div> 
 
-            <div class="result_help">
-                <span class="help">Подсказка:</span>
-                <span class="help_out"></span>
-            </div>
+        <div class="container">
+            <div class="canvas">
+                <h1>Игра "Угадай число"</h1>
+                <p class = "info">
+                    Выберите диапазон, в котором будет загаданно число.
+                </p>
+                <div class="buttons"> 
+                    <button class="range10">0-10</button>
+                    <button class="range100">0-100</button>
+                    <button class="range1000">0-1000</button>
+                </div>
+        
+                <div class = "form" style="display:none;">
+                    <span class="guess">
+                        Введите число:
+                        <input type="text" class="input_num">
+                    </span>
+                    <button class="num_from_button">Проверить</button>
+                </div>
 
-            <div class="result_count">
-                <span class="count">Число попыток:</span>
-                <span class="count_out"></span>
+                <div class="result" style="display:none;">
+                    <div class="result_check">
+                        <span class="check">Результат:</span>
+                        <span class="check_out"></span>
+                    </div>
+
+                    <div class="result_help">
+                        <span class="help">Подсказка:</span>
+                        <span class="help_out"></span>
+                    </div>
+
+                    <div class="result_count">
+                        <span class="count">Число попыток:</span>
+                        <span class="count_out"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="js/script.js"></script>
