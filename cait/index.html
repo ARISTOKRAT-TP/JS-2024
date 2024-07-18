@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Создание 3д сборки</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./images/sb/r.png">
+</head>
+
+<body class="forbody">
+    <header class="header">
+        <h1 style="text-align: center;">Создание трубопровода</h1>
+    </header>
+
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h1>ШТУЦЕР</h1>
+            </td>
+            <td>
+                <img src="./images/sh/sh.png" alt="штуцер" width="350" height="300">
+            </td>
+            <td> 
+                <canvas id="canvas1"></canvas>
+            </td>
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Первый этап</h1>
+                    <p>Для создания основы детали создаем эскиз и при помощи инструментов чертим основу тела вращения,
+                        ось вращения.</p>
+                    <img src="./images/sh/1.png" alt="1">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Второй этап</h1>
+                    <p>Используем команду “элемент вращения” по отношению к эскизу на 360°.</p>
+                    <img src="./images/sh/2.png" alt="2">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Третий этап</h1>
+                    <p>С помощью команды “фаска” создаем 4 фаски 2х45°.</p>
+                    <br>
+                    <img src="./images/sh/3.png" alt="3">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Четвертый этап</h1>
+                    <p>На обеих сторонах цилиндра создаем эскизы. При помощи инструментов чертим окружности диаметрами
+                        19 и 30 мм. – тела выдавливания. С помощью команды “вырезать выдавливанием” вырезаем цилиндры на
+                        17 и 19 мм в длину соответственно.</p>
+                    <img src="./images/sh/4.png" alt="4">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Пятый этап</h1>
+                    <p>С помощью команды “условное изображение резьбы” создадим метрическую резьбу на М20 и М39 мм
+                        длинами 14 и 12 мм соответственно.</p>
+                        <br>
+                    <img src="./images/sh/5.png" alt="5">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h1>НИППЕЛЬ</h1>
+            </td>
+            <td>
+                <img src="./images/ni/nip.png" alt="ниппель" width="350" height="300">
+            </td>
+            <td><canvas id="canvas2"></canvas> </td>
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Первый этап</h1>
+                    <p>Для создания основы детали создаем эскиз и при помощи инструментов чертим основу тела вращения,
+                        ось вращения.</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    <img src="./images/ni/1.png" alt="1">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Второй этап</h1>
+                    <p>Используем команду “элемент вращения” по отношению к эскизу на 360°.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <img src="./images/ni/2.png" alt="2">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Третий этап</h1>
+                    <p>На обеих сторонах цилиндра создаем эскизы. При помощи инструментов чертим окружности диаметрами
+                        18 и 24 мм. – тела выдавливания. С помощью команды “вырезать выдавливанием” вырезаем цилиндры на
+                        11 и 32 мм в длину соответственно. Между ними вырезаем цилиндр длиной 5 мм с углом 15°.</p>
+                    <img src="./images/ni/3.png" alt="3">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h1>ГАЙКА</h1>
+            </td>
+            <td>
+                <img src="./images/g/gay.png" alt="гайка" width="350" height="300">
+            </td>
+            <td> <canvas id="canvas3"></canvas> </td>
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Первый этап</h1>
+                    <p>Для создания основы детали создаем эскиз и при помощи инструментов чертим шестигранник диаметром
+                        56 мм. – тело выдавливания</p>
+                    <img src="./images/g/1.png" alt="1">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Второй этап</h1>
+                    <p>Используем команду “элемент выдавливания” на расстояние на 16 мм. </p>
+                    <br>
+                    <img src="./images/g/2.png" alt="2">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Третий этап</h1>
+                    <p>Создаем эскиз на боковой грани шестигранника и чертим с помощью инструментов треугольник с углом
+                        30° для будущей фаски. Отзеркаливаем на другую сторону.</p>
+                    <img src="./images/g/3.png" alt="3">
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Четвертый этап</h1>
+                    <p>С помощью команды “вырезать выдавливанием” вырезаем по оси Х. Так, создали две фаски 2×30°.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <img src="./images/g/4.png" alt="4">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Пятый этап</h1>
+                    <p>Создаем эскиз на одной из сторон шестигранника и при помощи инструментов чертим окружность
+                        диаметром 56 мм. – тело выдавливания. Выдавливаем с помощью команды “элемент выдавливания” на 11
+                        мм. </p>
+                        <br>
+                        <br>
+                    <img src="./images/g/5.png" alt="5">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Шестой этап</h1>
+                    <p>На окружности создаем эскиз. При помощи инструментов чертим окружность диаметром 34 мм. – тела
+                        выдавливания. С помощью команды “вырезать выдавливанием” вырезаем цилиндр на 11 мм в длину. С
+                        помощью команды “условное изображение резьбы” создадим метрическую резьбу на М39 мм длиной 11
+                        мм. </p>
+                    <img src="./images/g/6.png" alt="6">
+                </div>
+            </td>
+
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Седьмой этап</h1>
+                    <p>С другой стороны на шестиграннике создаем эскиз и с помощью инструментов чертим окружность
+                        диаметром 42 мм, используем команду “вырезать выдавливанием” в длину на 4 мм. Затем создаем
+                        эскиз и с помощью инструментов чертим окружность диаметром 38 мм, используем команду “вырезать
+                        выдавливанием” в длину на 4 мм.</p>
+                    <img src="./images/g/7.png" alt="7">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <pre></pre>
+    <table style="width:100%">
+        <tr>
+            <td>
+                <h1>СБОРКА</h1>
+            </td>
+            <td>
+                <img src="./images/sb/sb.png" alt="сборка" width="350" height="250">
+            </td>
+            <td> <canvas id="canvas4"></canvas></td>
+        </tr>
+    </table>
+    <table class="equal-columns-table">
+        <tr>
+            <td>
+                <div class="content">
+                    <h1>Первый этап</h1>
+                    <p>В штуцер устанавливается ниппель</p>
+                    <img src="./images/sb/1.png" alt="1">
+                </div>
+            </td>
+            <td>
+                <div class="content">
+                    <h1>Второй этап</h1>
+                    <p>Ниппель фиксируется в штуцере закручивающейся Гайкой </p>
+                    <img src="./images/sb/2.png" alt="2">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <pre></pre>
+    <section>
+        <article>
+            <a href="#top" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
+            <script src="script2.js"></script>
+            <script type="module" src="script.js"></script>
+        </article>
+    </section>
+    <footer class="footer"> Квашнина Ксения Дмитриевна 23-ист-4-2 ksusha03032005@gmail.com </footer>
+</body>
+</html>
