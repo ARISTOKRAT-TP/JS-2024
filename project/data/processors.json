@@ -1,0 +1,18 @@
+{
+    "goods" : [
+        {
+            "name" : "AMD Ryzen 5 5600 OEM",
+            "price": "12790",
+            "pict": "processors/amd_default.png",
+            "link": "/processors/amd_ryzen_5_5600_oem",
+            "brand": "AMD",
+            "seria": "Ryzen 5",
+            "socket": "AM4",
+            "cores": "6",
+            "threads": "12",
+            "ddr": "DDR4",
+            "freq": "3.5",
+            "tech_proc": "7"
+        }
+    ]
+}

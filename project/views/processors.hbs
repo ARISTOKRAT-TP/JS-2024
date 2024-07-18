@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Каталог товаров</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="/">
+                <div>
+                    <p>Интернет-каталог товаров комплектующих ПК</p> 
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <div>
+            <ul>
+                <li><a href="/">Главная страница</a></li>
+                <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+        <div class="d_good_block">
+            <div>
+                <p>{{good.name}}</p> 
+                <img class="img_good" src="/assets/{{good.pict}}" alt="{{good.name}} pict">
+                <p>{{good.price}} руб.</p>
+            </div>
+            <div class="d_descr">
+                <div><strong>Бренд:</strong> {{good.brand}}</div> 
+                <div><strong>Серия:</strong> {{good.seria}}</div>
+                <div><strong>Сокет:</strong> {{good.socket}}</div>
+                <div><strong>Ядра:</strong> {{good.cores}}</div>
+                <div><strong>Тип памяти:</strong> {{good.ddr}}</div>
+                <div><strong>Частота:</strong> {{good.freq}}</div>
+                <div><strong>Технологический процесс:</strong> {{good.tech_proc}} нм</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <footer>
+            <hr>
+            <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
+        </footer>
+    </div>
+
+</body>
+</html>

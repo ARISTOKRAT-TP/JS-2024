@@ -82,6 +82,7 @@ div footer {
     background-color:  #83a8ca;
 }
 
+/* CATEGORIES */
 
 .d_categories_block {
     max-width: 60%;
@@ -102,9 +103,95 @@ div footer {
     background-color: azure;
 }
 
+.d_category p {
+    text-align: center;
+}
+
 .img_category {
     text-align: center;
     max-width: 200px;
     max-height: 200px;
 }
-/*  */
+
+/* CATEGORIES */
+
+/* INDEX */
+
+.d_history {
+    text-align: left;
+    font-size: 18px;
+    max-width: 40%;
+    margin-left: 30%;
+    color:rgb(43, 81, 83);
+}
+
+/* INDEX */
+
+/* GOODS */
+
+.d_goods_block {
+    max-width: 60%;
+    margin-left: 20%;
+}
+
+.d_good {
+    font-size: 18px;
+    display: inline-block;
+    margin: 15px;
+    padding: 0px 20px;
+    border: 1px solid #83b9eb;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(126, 126, 126, 0.8);
+}
+
+.d_good:hover {
+    background-color: azure;
+    box-shadow: 5px 5px 5px 5px rgba(126, 126, 126, 0.8);
+}
+
+.d_good p {
+    text-align: center;
+    max-width: 200px;
+    overflow-wrap: anywhere;
+}
+
+.img_good {
+    text-align: center;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* GOODS */
+
+/* GOOD */
+
+.d_good_block {
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+.d_good_block div {
+    font-size: 18px;
+    display: inline-block;
+    margin: 15px;
+    padding: 0px 20px;
+}
+
+.d_good_block div p {
+    text-align: center;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.d_good_block .d_descr {
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+    margin: 40px;
+}
+
+.d_good_block .d_descr div {
+    display: block;
+}
+
+/* GOOD */

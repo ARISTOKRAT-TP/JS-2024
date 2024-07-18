@@ -4,8 +4,8 @@
 <head>
     <title>Каталог товаров</title>
     <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 
 <body>
@@ -29,16 +29,17 @@
         </div>
     </nav>
 
-    <div class="d_categories_block">
-        {{#each categories}}
-                <div class="d_category">
-                    <a href="{{this.link}}">
-                        <div>
-                            <p>{{this.name}}</p> 
-                            <img class="img_category" src="assets/{{this.pict}}" alt="{{this.name}} pict">
-                        </div>
-                    </a>
+    <div>
+        {{#each goods}}
+            <a href="{{this.link}}">
+                <div class="d_goods_block">
+                    <div class="d_good">
+                        <p>{{this.name}}</p> 
+                        <img class="img_good" src="/assets/{{this.pict}}" alt="{{this.name}} pict">
+                        <p>{{this.price}} руб.</p>
+                    </div>
                 </div>
+            </a>
         {{/each}}
     </div>
 
