@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+
+<title>Квиз "История Нижегородского кремля"</title>
+
+<!— Styles —>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+
+<body>
+<!— Start Page —>
+<div class="start-page" id="startPage">
+<h1>КВИЗ</h1>
+<h1>История каменного Нижегородского кремля</h1>
+<input type="text" id="username" placeholder="Введите имя пользователя" />
+<button id="startQuiz">Начать</button>
+<button id="viewResults">Результаты</button>
+</div>
+
+<!— Quiz Box —>
+<div class="quiz-box" id="quiz" style="display: none;">
+<div class="quiz-header">
+<h2 id="question">Question text</h2>
+<ul>
+<li>
+<input type="radio" name="answer" id="a" class="answer">
+<label for="a" id="a_text">Question</label>
+</li>
+<li>
+<input type="radio" name="answer" id="b" class="answer">
+<label for="b" id="b_text">Question</label>
+</li>
+<li>
+<input type="radio" name="answer" id="c" class="answer">
+<label for="c" id="c_text">Question</label>
+</li>
+</ul>
+</div>
+<button id="submit">Далее</button>
+</div>
+
+<!— Results Page —>
+<div class="results-page" id="resultsPage" style="display: none;">
+<h1>Результаты</h1>
+<table id="resultsTable">
+<tr>
+<th>Имя пользователя</th>
+<th>Результат</th>
+</tr>
+</table>
+<button onclick="showStartPage()">Вернуться к началу</button>
+</div>
+
+<!— Scripts —>
+<script src="js/script.js"></script>
+</body>
+</html>
