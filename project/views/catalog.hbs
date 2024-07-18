@@ -5,12 +5,20 @@
     <title>Каталог товаров</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/1.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
 
-    <header>Каталог товаров</header>
+    <header>
+        <div>
+            <a href="/">
+                <div>
+                    <p>Интернет-каталог товаров комплектующих ПК</p> 
+                </div>
+            </a>
+        </div>
+    </header>
 
     <nav>
         <div>
@@ -21,15 +29,17 @@
         </div>
     </nav>
 
-    <div>
-        <nav>
-            <div>
-                <ul>
-                {{#each categories}}
-                    <li><a href="{{this.link}}">{{this.name}}</a></li>
-                {{/each}}</ul>
-            </div>
-        </nav>
+    <div class="d_categories_block">
+        {{#each categories}}
+                <div class="d_category">
+                    <a href="{{this.link}}">
+                        <div>
+                            <p style="text-align: center;">{{this.name}}</p> 
+                            <img class="img_category" src="assets/{{this.pict}}" alt="{{this.name}} pict">
+                        </div>
+                    </a>
+                </div>
+        {{/each}}
     </div>
 
     <div>

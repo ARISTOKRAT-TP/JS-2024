@@ -1,4 +1,4 @@
-const categoriesFileName = 'public/assets/categories.json';
+const categoriesFileName = 'data/categories.json';
 
 const fs = require('fs');
 const express = require("express");

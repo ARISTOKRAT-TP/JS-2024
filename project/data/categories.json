@@ -1,0 +1,24 @@
+{
+    "categories" : [
+        {
+            "name": "Процессоры",
+            "link": "processors",
+            "pict": "processor200x200.png"
+        }, 
+        {
+            "name": "Видеокарты",
+            "link": "graphics-cards",
+            "pict": "graphics_cards200x200.png"
+        },
+        {
+            "name": "Материнские платы",
+            "link": "motherboards",
+            "pict": "motherbroad200x200.png"
+        },
+        {
+            "name": "Оперативная память",
+            "link": "ram",
+            "pict": "ram200x200.png"
+        }
+    ]
+}
