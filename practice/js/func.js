@@ -47,6 +47,7 @@ function counting() {
 
       if (diff <= 0) {
         clearInterval(timerId);
+        alert('Дата наступила!')
       }
 
       const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
