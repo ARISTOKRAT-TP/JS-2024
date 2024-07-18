@@ -9,46 +9,48 @@
 </head>
 
 <body>
+    <div class="d_content">
 
-    <header>
-        <div>
-            <a href="/">
-                <div>
-                    <p>Интернет-каталог товаров комплектующих ПК</p> 
-                </div>
-            </a>
-        </div>
-    </header>
+        <header>
+            <div>
+                <a href="/">
+                    <div>
+                        <p>Интернет-каталог товаров комплектующих ПК</p>
+                    </div>
+                </a>
+            </div>
+        </header>
 
-    <nav>
-        <div>
-            <ul>
-                <li><a href="/">Главная страница</a></li>
-                <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
-            </ul>
-        </div>
-    </nav>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <div>
-        {{#each goods}}
-            <a href="{{this.link}}">
-                <div class="d_goods_block">
-                    <div class="d_good">
-                        <p>{{this.name}}</p> 
+        <div class="d_goods_block">
+            {{#each goods}}
+            <div class="d_good">
+                <a href="{{this.link}}">
+                    <div>
+                        <p>{{this.name}}</p>
                         <img class="img_good" src="/assets/{{this.pict}}" alt="{{this.name}} pict">
                         <p>{{this.price}} руб.</p>
                     </div>
-                </div>
-            </a>
-        {{/each}}
+                </a>
+            </div>
+            {{/each}}
+        </div>
+
     </div>
 
-    <div>
-        <footer>
-            <hr>
-            <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
-        </footer>
-    </div>
+    <footer>
+        <hr>
+        <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
+    </footer>
 
 </body>
+
 </html>

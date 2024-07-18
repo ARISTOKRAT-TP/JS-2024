@@ -4,50 +4,52 @@
 <head>
     <title>Каталог товаров</title>
     <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 
 <body>
+    <div class="d_content">
 
-    <header>
-        <div>
-            <a href="/">
-                <div>
-                    <p>Интернет-каталог товаров комплектующих ПК</p> 
-                </div>
-            </a>
+        <header>
+            <div>
+                <a href="/">
+                    <div>
+                        <p>Интернет-каталог товаров комплектующих ПК</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="d_categories_block">
+            {{#each categories}}
+            <div class="d_category">
+                <a href="{{this.link}}">
+                    <div>
+                        <p>{{this.name}}</p>
+                        <img class="img_category" src="assets/{{this.pict}}" alt="{{this.name}} pict">
+                    </div>
+                </a>
+            </div>
+            {{/each}}
         </div>
-    </header>
 
-    <nav>
-        <div>
-            <ul>
-                <li><a href="/">Главная страница</a></li>
-                <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="d_categories_block">
-        {{#each categories}}
-                <div class="d_category">
-                    <a href="{{this.link}}">
-                        <div>
-                            <p>{{this.name}}</p> 
-                            <img class="img_category" src="assets/{{this.pict}}" alt="{{this.name}} pict">
-                        </div>
-                    </a>
-                </div>
-        {{/each}}
     </div>
 
-    <div>
-        <footer>
-            <hr>
-            <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
-        </footer>
-    </div>
+    <footer>
+        <hr>
+        <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
+    </footer>
 
 </body>
+
 </html>

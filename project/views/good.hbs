@@ -9,47 +9,49 @@
 </head>
 
 <body>
+    <div class="d_content">
 
-    <header>
-        <div>
-            <a href="/">
-                <div>
-                    <p>Интернет-каталог товаров комплектующих ПК</p> 
-                </div>
-            </a>
-        </div>
-    </header>
-
-    <nav>
-        <div>
-            <ul>
-                <li><a href="/">Главная страница</a></li>
-                <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div>
-        <div class="d_good_block">
+        <header>
             <div>
-                <p>{{good.name}}</p> 
-                <img class="img_good" src="/assets/{{good.pict}}" alt="{{good.name}} pict">
-                <p>{{good.price}} руб.</p>
+                <a href="/">
+                    <div>
+                        <p>Интернет-каталог товаров комплектующих ПК</p>
+                    </div>
+                </a>
             </div>
-            <div class="d_descr">
-                {{#each goodDescr}}
-                    <div><strong>{{@key}}:</strong> {{this}}</div> 
-                {{/each}}
+        </header>
+
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a class="pickedli" href="catalog">Каталог товаров</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <div class="d_good_block">
+                <div class="d_card">
+                    <p>{{good.name}}</p>
+                    <img class="img_good" src="/assets/{{good.pict}}" alt="{{good.name}} pict">
+                    <p>{{good.price}} руб.</p>
+                </div>
+                <div class="d_descr">
+                    {{#each goodDescr}}
+                    <div><strong>{{@key}}:</strong> {{this}}</div>
+                    {{/each}}
+                </div>
             </div>
         </div>
+
     </div>
 
-    <div>
-        <footer>
-            <hr>
-            <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
-        </footer>
-    </div>
+    <footer>
+        <hr>
+        <h4>23-ИСТ-4-2 Белов Дмитрий Алексеевич dbelov1357@gmail.com</h4>
+    </footer>
 
 </body>
+
 </html>

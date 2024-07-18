@@ -19,7 +19,9 @@ header div p {
 
 body {
     background-color: rgb(238, 244, 253);
-    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav ul {
@@ -54,10 +56,8 @@ a {
     font-weight: bold;
 }
 
-div footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
+footer {
+    margin-top: auto;
 	height: 80px;
     width: 100%;
     text-align: center;
@@ -65,6 +65,10 @@ div footer {
 }
 
 /* COMMON CLASSES */
+
+.d_content {
+    min-height: 90%;
+}
 
 .d_common {
     text-align: left;
@@ -180,6 +184,7 @@ div footer {
 .d_good_block div p {
     text-align: center;
     font-weight: bold;
+    max-width: 200px;
     overflow-wrap: anywhere;
 }
 
