@@ -17,7 +17,7 @@ function save() {
 //функция отсчета времени
 function counting() {
 
-  if (!deadline || deadline == 'undefined'){
+  if (!deadline || deadline == 'undefined' || deadline == 'Invalid Date'){
     alert('Введите дату!')
   }
 
@@ -26,6 +26,18 @@ function counting() {
     alert('Эта дата уже наступила. Выберите другую')
   }
 
+  // получаем элементы, содержащие компоненты даты с сайта
+  const $days = document.querySelector('.timer__days');
+  const $hours = document.querySelector('.timer__hours');
+  const $minutes = document.querySelector('.timer__minutes');
+  const $seconds = document.querySelector('.timer__seconds');
+    
+  // вызываем функцию countdownTimer
+  countdownTimer();
+
+  // вызываем функцию countdownTimer каждую секунду
+  timerFlag = setInterval(countdownTimer, 1000);
+  
 
     // склонение дней, часов, минут и секунд
     function declensionNum(n, text_forms) {  
@@ -39,17 +51,17 @@ function counting() {
 
     // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
     function countdownTimer() {
-
-    // id таймера
-    let timerId = null;
+    // флаг таймера
+    let timerFlag = null;
 
       const diff = deadline - new Date();
 
       if (diff <= 0) {
         clearInterval(timerId);
-        alert('Дата наступила!')
+        flag = 0;
       }
 
+      //вычисляем количество дней, часов, минут и секунд при помощи перевода из миллисекунд 
       const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
       const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 - 3 : 0;
       const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
@@ -67,17 +79,5 @@ function counting() {
       $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
       $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
     }
-
-    // получаем элементы, содержащие компоненты даты с сайта
-    const $days = document.querySelector('.timer__days');
-    const $hours = document.querySelector('.timer__hours');
-    const $minutes = document.querySelector('.timer__minutes');
-    const $seconds = document.querySelector('.timer__seconds');
-    
-    // вызываем функцию countdownTimer
-    countdownTimer();
-    
-    // вызываем функцию countdownTimer каждую секунду
-    timerId = setInterval(countdownTimer, 1000);
 
   };
