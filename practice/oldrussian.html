@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<html> 
+  
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport'>
+    <title>Конвертер старорусских единиц длины</title> 
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+    <div class='boxed-text'>
+    <button id='theme'>Переключить тему</button>
+    </div>
+    <nav>
+        <p></p>
+        <table style="background-color:rgba(255, 255, 255, 0.905);"></table>
+          <tr>
+           <th><a href="metric.html" class="navlink"><center>Метрическая система</center></a></th>
+           <br>
+           <th><a href="british_american.html" class="navlink"><center>Британская/Американская система</center></a></th>
+           <br>
+           <th><a href="oldrussian.html" class="navlink"><center>Старорусская система</center></a></th>
+           <br>
+          </tr>
+        </table>
+        </nav>
+    <div class="container"> 
+        <h1>Конвертер старорусских единиц длины</h1> 
+        <input type="number" id="inputValue" 
+            placeholder="Введите величину" 
+            oninput="convert()"> 
+  
+        <select id="fromUnit" onchange="convert()"> 
+            <option value="sazhen">Сажень</option> 
+            <option value="pyad">Пядь</option> 
+            <option value="arshin">Аршин</option> 
+            <option value="vershok">Вершок</option>  
+        </select> 
+        <select id="toUnit" onchange="convert()"> 
+            <option value="sazhen">Сажень</option> 
+            <option value="pyad">Пядь</option> 
+            <option value="arshin">Аршин</option> 
+            <option value="vershok">Вершок</option>  
+        </select> 
+        <p id="result"></p> 
+    </div> 
+    <script src="code/script3.js"></script>
+    <script src="code/themescript.js"></script>
+</body>
+</html>
