@@ -1,148 +1,167 @@
+/* Стили для body */
 body {
-    font-family: arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: arial, sans-serif;
-    background-color: #f4f4f4;
-    height: 120vh;
-    justify-content: center;
+    font-family: arial, sans-serif; /* Установка начального шрифта */
+    margin: 0; /* Удаление внешних отступов */
+    padding: 0; /* Удаление внутренних отступов */
+    box-sizing: border-box; /* Применение box-sizing ко всем элементам */
+    background-color: #f4f4f4; /* Установка фона для body */
+    height: 120vh; /* Высота выше, чем 100vh, для тестирования прокрутки */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
 }
 
+/* Стили для кнопки .color-button */
+.color-button {
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Внутренние отступы */
+    border: none;/* Без границы */
+    cursor: pointer; /* Указатель в виде руки при наведении */
+}
+
+
+/* Стили для header */
 header {
-    background: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
+    background: #333; /* Темный фон */
+    color: #fff; /* Белый цвет текста */
+    display: flex; /* Использование flex layout */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    padding: 10px 20px; /* Внутренние отступы */
+    position: fixed; /* Фиксированное положение вверху */
+    width: 100%; /* Ширина 100% */
     justify-content: space-between; /* Разделение содержимого по краям */
 }
 
+/* Стили для nav */
 nav {
     margin-left: auto; /* Сдвиг nav вправо */
 }
 
+/* Стили для списка nav ul */
 nav ul {
-    display: flex;
+    display: flex; /* Flex display для ul */
 }
 
+/* Стили для элементов списка nav ul li */
 nav ul li {
-    margin-left: 20px;
+    margin-left: 20px;   /* Отступ слева между элементами */
+    margin-right: 20px; /* Отступ справа между элементами */
 }
 
+/* Стили для ссылок в nav */
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Белый цвет текста ссылок */
 }
 
+/* Стили при наведении на ссылки в nav */
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Подчеркивание ссылки при наведении */
 }
 
+/* Стили для формы .contact-form */
 .contact-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    background: #fff; /* Белый фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+    width: 400px; /* Ширина формы */
 }
 
+/* Стили для текстового поля в форме */
 .contact-form .form-group textarea {
-    resize: vertical;
+    resize: vertical; /* Поле изменяет размер только по вертикали */
 }
 
+/* Стили для кнопки в форме */
 .contact-form .form-group button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #28a745; /* Зеленый фон */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Без границ */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Указатель в виде руки при наведении */
 }
 
+/* Стили для кнопки в неактивном состоянии */
 .contact-form .form-group button:disabled {
-    background-color: #ccc;
+    background-color: #ccc; /* Серый фон */
 }
 
+/* Стили для сообщений об ошибке */
 .error-message {
-    color: red;
-    font-size: 0.875em;
-    margin-top: 5px;
+    color: red; /* Красный цвет текста ошибок */
+    font-size: 0.875em; /* Размер шрифта для ошибок */
+    margin-top: 5px; /* Отступ сверху */
 }
 
+/* Стили для группы элементов формы */
 .contact-form .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Отступ снизу между группами */
 }
 
+/* Стили для контейнера слайдера */
 .slider-container {
-    width: 300px;
-    margin: 5px auto;
-    text-align: center;
+    width: 300px; /* Ширина контейнера */
+    margin: 5px auto; /* Установка вертикальных и горизонтальных отступов */
+    text-align: center; /* Центрирование текста */
 }
 
+/* Стили для input[type=range] */
 input[type=range] {
-    width: 100%;
+    width: 100%; /* Ширина равна ширине контейнера */
 }
 
+/* Стили для вывода значения слайдера */
 .output-value {
-    margin-top: 10px;
-    font-size: 1.2em;
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 1.2em; /* Размер шрифта */
 }
 
+/* Стили для input и textarea в форме */
 .contact-form .form-group input, .contact-form .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Ширина 100% */
+    padding: 10px; /* Внутренние отступы */
+    box-sizing: border-box; /* Применение box-sizing ко всем элементам */
+    border: 1px solid #ccc; /* Серый цвет границ */
+    border-radius: 5px; /* Скругленные углы */
 }
 
+/* Стили для заголовка в header */
 header h1 {
-    margin: 0;
-    margin-right: auto;
+    margin: 0; /* Без отступов */
+    margin-right: auto; /* Автоматический отступ справа для центровки */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-}
-
+/* Основные стили для main */
 main {
-    padding: 20px;
+    padding: 20px; /* Внутренние отступы */
 }
 
+/* Стили для секций внутри main */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Отступ снизу между секциями */
 }
 
+/* Стили для формы */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Использование flex для формы */
+    flex-direction: column; /* Вертикальная ориентация элементов */
 }
 
+/* Стили для меток в форме */
 form label {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Отступ снизу */
 }
 
+/* Стили для input, textarea и button в форме */
 form input, form textarea, form button {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Отступ снизу */
 }
 
+/* Стили для footer */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    bottom: 0;
+    background: #333; /* Темный фон */
+    color: #fff; /* Белый цвет текста */
+    text-align: center; /* Центрирование текста */
+    padding: 10px; /* Внутренние отступы */
+    width: 100%; /* Ширина 100% */
+    bottom: 0; /* Прикрепление к низу */
 }

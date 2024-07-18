@@ -1,3 +1,4 @@
+// Получаем элемент формы по ID и добавляем обработчик события
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение формы
 
@@ -15,7 +16,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     polygonError = document.getElementById('polygon-error');
     modelTypeError = document.getElementById('model-type-error');
 
+    // Переменная для отслеживания валидности формы
      valid = true;
+
+     // Проверяем, если поле "name" пустое, то показываем ошибку
     if (!name) {
         nameError.textContent = 'Имя обязательно';
         valid = false;
@@ -23,13 +27,15 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         nameError.textContent = '';
     }
 
-    if (!email || !/^\S+@\S+\.\S+$/) {
+    // Проверяем, если поле "email" пустое или невалидный формат
+    if (!email || !/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i.test(email)) {
         emailError.textContent = 'Валидный email обязателен';
         valid = false;
     } else {
         emailError.textContent = '';
     }
 
+    // Проверяем, если поле "message" пустое, то показываем ошибку
     if (!message) {
         messageError.textContent = 'Сообщение обязательно';
         valid = false;
@@ -37,6 +43,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         messageError.textContent = '';
     }
 
+    // Проверяем, если поле "polygon" не выбрано, то показываем ошибку
     if (!polygon) {
         polygonError.textContent = 'Полигональность обязательна';
         valid = false;
@@ -44,6 +51,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         polygonError.textContent = '';
     }
 
+    // Проверяем, если поле "modeltype" пустое, то показываем ошибку
     if (!modeltype) {
         modelTypeError.textContent = 'Тип модели обязателен';
         valid = false;
@@ -51,5 +59,17 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         modelTypeError.textContent = '';
     }
 
+          function changeColor() {
+              let button = document.querySelector(".color-button"); // Получаем элемент кнопки
+              let originalColor = button.style.backgroundColor; // Сохраняем исходный цвет
+
+              // Меняем цвет кнопки на зеленый
+              button.style.backgroundColor = "green";
+
+              // Возвращаем исходный цвет через одну секунду
+              setTimeout(function() {
+                  button.style.backgroundColor = originalColor;
+              }, 100);
+          }
 
 });

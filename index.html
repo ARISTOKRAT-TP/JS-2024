@@ -105,36 +105,11 @@
             <div class="error-message" id="model-type-error"></div>
         </div>
 
-        <style>
-    /* Начальные стили для кнопки */
-    .color-button {
-        background-color: blue;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-    }
-</style>
 </head>
 <body>
 <div class="form-group">
     <button type="submit" class="color-button" onclick="changeColor()">Отправить</button>
 </div>
-
-<script>
-        function changeColor() {
-            var button = document.querySelector(".color-button"); // Получаем элемент кнопки
-            var originalColor = button.style.backgroundColor; // Сохраняем исходный цвет
-
-            // Меняем цвет кнопки на зеленый
-            button.style.backgroundColor = "green";
-
-            // Возвращаем исходный цвет через одну секунду
-            setTimeout(function() {
-                button.style.backgroundColor = originalColor;
-            }, 100);
-        }
-</script>
 
 </body>
         </section>
