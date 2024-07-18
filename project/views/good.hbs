@@ -37,13 +37,9 @@
                 <p>{{good.price}} руб.</p>
             </div>
             <div class="d_descr">
-                <div><strong>Бренд:</strong> {{good.brand}}</div> 
-                <div><strong>Серия:</strong> {{good.seria}}</div>
-                <div><strong>Сокет:</strong> {{good.socket}}</div>
-                <div><strong>Ядра:</strong> {{good.cores}}</div>
-                <div><strong>Тип памяти:</strong> {{good.ddr}}</div>
-                <div><strong>Частота:</strong> {{good.freq}}</div>
-                <div><strong>Технологический процесс:</strong> {{good.tech_proc}} нм</div>
+                {{#each goodDescr}}
+                    <div><strong>{{@key}}:</strong> {{this}}</div> 
+                {{/each}}
             </div>
         </div>
     </div>

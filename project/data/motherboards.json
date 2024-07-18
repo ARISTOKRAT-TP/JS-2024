@@ -1,0 +1,15 @@
+{
+    "goods" : [
+        {
+            "name" : "",
+            "price": "",
+            "pict": "motherboards/.png",
+            "link": "/motherboards/",
+            "brand": "",
+            "socket": "",
+            "ddr": "",
+            "slots": "",
+            "chipset": ""
+        }
+    ]
+}

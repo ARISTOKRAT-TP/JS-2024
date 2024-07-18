@@ -1,0 +1,16 @@
+{
+    "goods" : [
+        {
+            "name" : "",
+            "price": "",
+            "pict": "ram/.png",
+            "link": "/ram/",
+            "brand": "",
+            "value": "",
+            "ddr": "",
+            "freq": "",
+            "latency": "",
+            "voltage": ""
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "goods" : [
+        {
+            "name" : "",
+            "price": "",
+            "pict": "graphicsCards/.png",
+            "link": "/graphics-cards/",
+            "brand": "",
+            "g_processor": "",
+            "v_memory": "",
+            "ddr": "",
+            "max_energy": "",
+            "tech_proc": ""
+        }
+    ]
+}
