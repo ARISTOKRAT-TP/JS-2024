@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обезьяны</title>
+	<link rel="stylesheet" href="CSSS.css">
+    
+</head>
+<body>
+    <div class="backgroundGif"></div>
+    <div class="topText" onclick="toggleInfo()">Читать О макаках</div>
+    
+    <div class="mon1" id="infoBlock">
+        <div class="monPaj" onclick="swingImage()" onmouseover="toggleImageSize()" onmouseout="resetImageSize()"></div>
+        <div class="textMAKAK">
+            <p>
+                Мака́ки — род приматов из семейства мартышковых, состоящий из 21 вида, большинство из которых обитают в Азии.
+            </p>
+            <p><span onclick="toggleAdditionalText()">Подробнее...</span></p>
+            <div class="additionalText" id="additionalText">
+                Макаки — приматы средней величины с крепким туловищем и сильными конечностями. Их густая шерсть окрашена в серо-коричневый цвет, однако порою бывает и чёрной. На продолговатой морде волосяной покров отсутствует. У некоторых видов на голове имеются заметные «шапки» либо своеобразные бороды. Важным отличительным признаком является длина хвоста: у маготов он полностью отсутствует, у некоторых видов он куцый, а у остальных почти такой же длинный, как всё туловище. Длина тела у макак достигает 80 см, а масса колеблется от 6 до 15 кг. Самцы в среднем в два раза тяжелее самок.
+            </div>
+        </div>
+    </div>
+    
+    <div class="mon2" id="quizBlock" onclick="expandQuizBlock()">
+        <p id="quizText">НАЧАТЬ ВИКТОРИНУ</p>
+    </div>
+
+<script src="JS_for_index.js"></script>
+</body>
+</html>

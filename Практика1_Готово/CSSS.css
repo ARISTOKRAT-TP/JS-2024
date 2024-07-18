@@ -1,0 +1,133 @@
+		body {
+            background-image: url("5.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+			
+
+        }
+        .backgroundGif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("background.gif");
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+        .topText {
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            text-align: center;
+            color: white;
+            font-size: 8em;
+            cursor: pointer;
+            user-select: none;
+            z-index: 2;
+        }
+        .topText:hover {
+            animation: pulseAnimation 1s infinite;
+        }
+        .mon1 {
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 80%;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            margin-top: 22.5vh;
+            margin-bottom: 5vh;
+            position: absolute;
+            left: -100%;
+            transition: left 0.5s ease;
+            z-index: 2;
+        }
+        .mon2 {
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 30%;
+            border-radius: 20px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            font-size: 2em;
+            bottom: 50vh;
+            transition: bottom 0.5s ease;
+            cursor: pointer;
+            user-select: none;
+        }
+        .mon2:hover #quizText {
+            animation: pulseAnimation 1s infinite;
+        }
+        .mon1.show {
+            left: 10%;
+        }
+        .mon1.show + .mon2 {
+            bottom: 10vh;
+        }
+        .monPaj {
+            height: 100%;
+            width: 100%;
+            max-width: 500px;
+            background-image: url("1.png");
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+        .textMAKAK {
+            height: 500px;
+            margin-left: 5%;
+            margin-right: 5%;
+            max-width: 850px;
+            color: white;
+            font-size: 25px;
+        }
+        .textMAKAK span {
+            cursor: pointer;
+            user-select: none;
+        }
+        .textMAKAK span:hover {
+            animation: pulseAnimation 1s infinite;
+        }
+        @keyframes pulseAnimation {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .monPaj:hover {
+            transform: scale(0.8);
+        }
+        @keyframes swingAnimation {
+            0% { transform: rotate(0) scale(0.8); }
+            25% { transform: rotate(5deg) scale(0.8); }
+            50% { transform: rotate(-5deg) scale(0.8); }
+            75% { transform: rotate(3deg) scale(0.8); }
+            100% { transform: rotate(0) scale(0.8); }
+        }
+        .additionalText {
+            display: none;
+            color: white;
+            font-size: 15px;
+            margin-top: 20px;
+            text-align: left;
+            opacity: 0;
+        }
+        @keyframes textAnimationShow {
+            0% { opacity: 0; font-size: 15px; }
+            100% { opacity: 1; font-size: 25px; }
+        }
+        @keyframes textAnimationHide {
+            0% { opacity: 1; font-size: 25px; }
+            100% { opacity: 0; font-size: 15px; }
+        }

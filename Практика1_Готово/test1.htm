@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>тест</title>
+	<link rel="stylesheet" href="CSS_for_test.css">
+</head>
+<body>
+<div class="quizOpros" id="quizOpros">
+    <div class="quizQuestion">
+        <h3>Вопрос 1: К какому семейству относятся макаки?</h3>
+        <div class="quizAnswers">
+            <input type="radio" id="q1a1" name="q1" value="a1" data-correct>
+            <label for="q1a1">Семейство мартышковых</label>
+            <input type="radio" id="q1a2" name="q1" value="a2">
+            <label for="q1a2">Семейство кошачьих</label>
+            <input type="radio" id="q1a3" name="q1" value="a3">
+            <label for="q1a3">Семейство крыс</label>
+        </div>
+    </div>
+    <div class="quizQuestion">
+        <h3>Вопрос 2: Где обитают большинство видов макак?</h3>
+        <div class="quizAnswers">
+            <input type="radio" id="q2a1" name="q2" value="a1" data-correct>
+            <label for="q2a1">В Азии</label>
+            <input type="radio" id="q2a2" name="q2" value="a2">
+            <label for="q2a2">В Африке</label>
+            <input type="radio" id="q2a3" name="q2" value="a3">
+            <label for="q2a3">В Южной Америке</label>
+        </div>
+    </div>
+    <div class="quizQuestion">
+        <h3>Вопрос 3: Каковы основные отличительные черты макак?</h3>
+        <div class="quizAnswers">
+            <input type="radio" id="q3a1" name="q3" value="a1">
+            <label for="q3a1">Густая шерсть и длинный хвост</label>
+            <input type="radio" id="q3a2" name="q3" value="a2">
+            <label for="q3a2">Отсутствие хвоста и чёрный цвет шерсти</label>
+            <input type="radio" id="q3a3" name="q3" value="a3" data-correct>
+            <label for="q3a3">Заметные "шапки" на голове и длинные уши</label>
+        </div>
+    </div>
+</div>
+<div class="buttonContainer" id="buttonContainer">
+    <button class="quizButton" id="backButton" onclick="expandQuizBlock()">Назад</button>
+    <button class="quizButton submitButtonHidden" id="submitButton" onclick="showResults()">Отправить</button>
+</div>
+<div class="results" id="results">
+    <h2>Результаты теста</h2>
+    <div id="score"></div>
+    <div id="firstAttemptStats"></div>
+</div>
+<script src="JS_for_test.js"></script>
+</body>
+</html>
