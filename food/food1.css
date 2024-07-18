@@ -1,5 +1,4 @@
-body {
-}
+
 .navbar {
     background-color:#131313
 }
@@ -27,6 +26,9 @@ body {
     color:#000000;
     border: 1px solid #ffffff;
 }
+#btn1:active {
+    background-color: rgb(145, 201, 133);
+}
 #search1 {
     border-radius: 20px;
     border: 1px solid #000000;
@@ -45,11 +47,11 @@ body {
 .front {
     display: flex;
     flex: 1;
-    overflow: hidden; /* Скрыть часть картинки, которая выходит за пределы контейнера */
-    width: 50%; /* Установить ширину контейнера равной половине экрана */
-    position: relative; /* Устанавливаем позиционирование относительно родительского элемента */
-    width: 100vw; /* Установить ширину контейнера в ширину экрана */
-    overflow-x: hidden; /* Скрыть горизонтальную прокрутку для контейнера */
+    overflow: hidden; 
+    width: 50%; 
+    position: relative; 
+    width: 100vw; 
+    overflow-x: hidden; 
     margin-top: -5%;
     
 }
@@ -66,11 +68,11 @@ body {
 }
 
 .photo1 {
-    width: 200%; /* задаем ширину изображения в 80% от родительского контейнера */
-    height: auto; /* автоматическое расчет высоты для сохранения пропорций */
-    max-width: 100%; /* устанавливаем максимальную ширину изображения */
-    display: block; /* делаем изображение блочным элементом */
-    margin-left: 5%; /* Задаем негативный отступ для перемещения картинки влево */
+    width: 200%; 
+    height: auto; 
+    max-width: 100%; 
+    display: block; 
+    margin-left: 5%; 
     margin-top: -5%;
     
 }
@@ -103,5 +105,5 @@ body {
     overflow: hidden;
 }
 .imgPack {
-    transform: translateX(200%); /* Перемещаем изображения вправо на 700 пикселей */
+    transform: translateX(200%); 
 }
