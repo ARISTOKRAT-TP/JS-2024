@@ -16,13 +16,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     polygonError = document.getElementById('polygon-error');
     modelTypeError = document.getElementById('model-type-error');
 
-    // Переменная для отслеживания валидности формы
-     valid = true;
-
      // Проверяем, если поле "name" пустое, то показываем ошибку
     if (!name) {
         nameError.textContent = 'Имя обязательно';
-        valid = false;
     } else {
         nameError.textContent = '';
     }
@@ -30,7 +26,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // Проверяем, если поле "email" пустое или невалидный формат
     if (!email || !/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i.test(email)) {
         emailError.textContent = 'Валидный email обязателен';
-        valid = false;
     } else {
         emailError.textContent = '';
     }
@@ -38,7 +33,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     // Проверяем, если поле "message" пустое, то показываем ошибку
     if (!message) {
         messageError.textContent = 'Сообщение обязательно';
-        valid = false;
     } else {
         messageError.textContent = '';
     }
