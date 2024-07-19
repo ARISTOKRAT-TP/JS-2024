@@ -133,9 +133,22 @@ footer {
 
 /* GOODS */
 
+.d_filter_block {
+    display: inline-block;
+    width: 20%;
+    padding: 15px;
+}
+
+.d_filter_block div {
+    font-size: 18px;
+    color:rgb(43, 81, 83);
+    text-align: center;
+}
+
 .d_goods_block {
     max-width: 60%;
-    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .d_good {

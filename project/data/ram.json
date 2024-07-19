@@ -1,16 +1,16 @@
 {
     "goods" : [
         {
-            "name" : "",
-            "price": "",
-            "pict": "ram/.png",
-            "link": "/ram/",
-            "brand": "",
-            "value": "",
-            "ddr": "",
-            "freq": "",
-            "latency": "",
-            "voltage": ""
+            "name" : "Silicon Power Xpower Zenith SP032GXLWU560FSE",
+            "price": "10990",
+            "pict": "ram/silicon_power_xpower_zenith.png",
+            "link": "/ram/silicon_power_xpower_zenith",
+            "brand": "Silicon Power",
+            "value": "32",
+            "ddr": "DDR5",
+            "freq": "5600 ",
+            "latency": "CL40",
+            "voltage": "1.35"
         }
     ]
 }

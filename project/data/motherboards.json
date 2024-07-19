@@ -1,15 +1,15 @@
 {
     "goods" : [
         {
-            "name" : "",
-            "price": "",
-            "pict": "motherboards/.png",
-            "link": "/motherboards/",
-            "brand": "",
-            "socket": "",
-            "ddr": "",
-            "slots": "",
-            "chipset": ""
+            "name" : "ASUS PRIME B650-PLUS",
+            "price": "20450",
+            "pict": "motherboards/b650_plus.png",
+            "link": "/motherboards/asus_prime_b650_plus",
+            "brand": "ASUS ",
+            "socket": "AM5",
+            "ddr": "DDR5",
+            "slots": "4",
+            "chipset": "AMD B650"
         }
     ]
 }

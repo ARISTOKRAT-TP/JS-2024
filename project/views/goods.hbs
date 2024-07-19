@@ -30,6 +30,34 @@
             </div>
         </nav>
 
+        <div class="d_filter_block">
+            <div>Фильтр</div>
+            <form method="post">
+                <p>
+                    <label>Цена:</label><br>
+                    <input name="lowest_price" value="0"/>
+                    <input name="highest_price" value="1000000"/>
+                </p>
+                {{#each good_filters}}
+                    {{#if this.checkboxList}}
+                        <p>
+                            <label>{{this.label}}:</label><br>
+                            {{#each this.values}}
+                                <input type="checkbox" name="{{../this.key}} {{this}}" id="{{this}}"/>
+                                <label for="{{this}}">{{this}}</label>
+                            {{/each}}
+                        </p>
+                    {{else}}
+                        <p>
+                            <label>{{this.label}}</label><br>
+                            <input name="{{this}}"/>
+                        </p>
+                    {{/if}}
+                {{/each}}
+                <input type="submit" value="Применить" />
+            </form>
+        </div>
+
         <div class="d_goods_block">
             {{#each goods}}
             <div class="d_good">

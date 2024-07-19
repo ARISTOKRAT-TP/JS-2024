@@ -1,16 +1,16 @@
 {
     "goods" : [
         {
-            "name" : "",
-            "price": "",
-            "pict": "graphicsCards/.png",
+            "name" : "GIGABYTE NVIDIA GeForce RTX 3060 GV-N3060GAMING",
+            "price": "38200",
+            "pict": "graphicsCards/graphics_card.png",
             "link": "/graphics-cards/",
-            "brand": "",
-            "g_processor": "",
-            "v_memory": "",
-            "ddr": "",
+            "brand": "GIGABYTE",
+            "g_processor": "NVIDIA GeForce RTX 3060",
+            "v_memory": "12",
+            "ddr": "GDDR6",
             "max_energy": "",
-            "tech_proc": ""
+            "tech_proc": "8"
         }
     ]
 }
