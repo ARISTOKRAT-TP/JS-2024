@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор Паролей</title>
+    <link rel="stylesheet" href="style.css">  <!-- Подключение файла стилей -->
+</head>
+<body>
+    <div class="container">  <!-- Основной контейнер для элементов страницы -->
+        <h1>Генератор Паролей</h1>  
+        
+        <div class="settings">  <!-- Блок настроек генерации пароля -->
+            <label for="length">Длина пароля:</label> 
+            <input type="number" id="length" name="length" min="4" max="100" value="12"> 
+            
+            <label>
+                <input type="checkbox" id="includeLetters" checked> Включить буквы 
+            </label>
+            <label>
+                <input type="checkbox" id="includeNumbers" checked> Включить цифры 
+            </label>
+            <label>
+                <input type="checkbox" id="includeSymbols"> Включить спецсимволы 
+            </label>
+        </div>
+        
+        <button onclick="generatePassword()">Сгенерировать Пароль</button>  
+        
+        <p id="password" onclick="copyPassword()" title="Нажмите, чтобы скопировать"></p>  <!-- Элемент для отображения сгенерированного пароля -->
+        <p id="message"></p>  <!-- Элемент для отображения сообщений -->
+        
+        <div class="preset-passwords">  <!-- Блок с предустановленными паролями -->
+            <h2>Предустановленные Пароли</h2> 
+            <ul id="presetPasswordsList">  <!-- Список предустановленных паролей -->
+                
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>  <!-- Подключение файла скрипта -->
+</body>
+</html>
