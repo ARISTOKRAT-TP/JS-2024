@@ -1,0 +1,114 @@
+/* Основные стили для тела страницы */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298, #4eb5f1);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  
+  /* Анимация градиентного фона */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Стиль для заголовка */
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Стиль для изображения в заголовке */
+  .header img {
+    width: 200px;
+  }
+  
+  /* Стиль для основного контейнера */
+  .container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Стиль для блока настроек */
+  .settings {
+    margin-bottom: 20px;
+  }
+  
+  /* Стиль для меток */
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  /* Стиль для поля ввода числа */
+  input[type="number"] {
+    width: 50px;
+    margin-left: 10px;
+  }
+  
+  /* Стиль для кнопки */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  /* Стиль для кнопки при наведении курсора */
+  button:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Стиль для элемента, отображающего пароль */
+  #password {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  /* Стиль для элемента, отображающего сообщение */
+  #message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+  }
+  
+  /* Стиль для блока с предустановленными паролями */
+  .preset-passwords {
+    margin-top: 30px;
+  }
+  
+  /* Стиль для списка предустановленных паролей */
+  .preset-passwords ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Стиль для элементов списка предустановленных паролей */
+  .preset-passwords li {
+    background-color: #f4f4f4;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
