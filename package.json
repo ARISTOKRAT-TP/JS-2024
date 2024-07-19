@@ -1,0 +1,24 @@
+{
+  "name": "my_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARISTOKRAT-TP/JS-2024.git"
+  },
+  "author": "DanilKalyakin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ARISTOKRAT-TP/JS-2024/issues"
+  },
+  "homepage": "https://github.com/ARISTOKRAT-TP/JS-2024#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  }
+}
