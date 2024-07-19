@@ -7,15 +7,15 @@ const {selects, success} = variables;
 
 
 
-const rendSel = () => {
+const rendSel = () => {  //Скрипт для рендера кодов из API
     selects.forEach((select) => {
         url.codes.forEach(([code]) => {
             const element = document.createElement('option');
             element.value = code;
             element.innerText = code;
-            select.insertAdjacentElement("beforeend", element);
+            select.insertAdjacentElement("beforeend", element); //Введенная валюта
         });
-        select.addEventListener('change', handleChange);
+        select.addEventListener('change', handleChange); //Сама конвертация
     });
 };
 export const fetchCodes = async() =>{

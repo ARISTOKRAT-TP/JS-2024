@@ -1,4 +1,4 @@
-export const renderRes = ({code, amount, full }) => {
+export const renderRes = ({code, amount, full }) => { //Код для правильного рендера результата
     return `<div class="form-result__item-icon icon">
             <img src="./images/arrow.svg" alt="" />
           </div>

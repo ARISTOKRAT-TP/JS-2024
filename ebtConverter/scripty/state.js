@@ -1,4 +1,4 @@
-export default {
+export default { //Подключение API
     url: "https://v6.exchangerate-api.com/v6/af1617cfcc184abbf37ada71",
     codes: [],
     pair: {

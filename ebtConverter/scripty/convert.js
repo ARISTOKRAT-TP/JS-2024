@@ -4,21 +4,21 @@ import url from "./state.js";
 import { getFull } from "./utils.js";
 import variables from "./variables.js";
 
-const {success, formResults } = variables;
+const {success, formResults, toSelect, fromSelect } = variables;
 
 
-export const handleChange = ({target: {value,name}}) => {
+export const handleChange = ({target: {value,name}}) => { //Выбор валют
     state.pair = {
         ...state.pair,
         [name]: value,
     };
 };
 
-export const handleInp =  ({target: {value, name}}) => {
+export const handleInp =  ({target: {value, name}}) => { //Ввод кол-ва валюты
     state[name] = Number(value);
 };
 
-const Insertres = ({base_code: baseCode, target_code: targetCode, conversion_rate: rate,
+const Insertres = ({base_code: baseCode, target_code: targetCode, conversion_rate: rate, //Вывод результата
     conversion_result: result, time_last_update_utc: time,
  }) => {
 const from = {
@@ -32,15 +32,15 @@ const to = {
     amount: result,
     full: getFull(state.codes, targetCode)
 }
-resultFrom.innerHTML = renderRes(from);
-resultTo.innerHTML = renderRes(to);
+resultFrom.innerHTML = renderRes(from); //Вывод на сайт из какой валюты конвертируем (результат)
+resultTo.innerHTML = renderRes(to); //Вывод на сайт в какую валюту конвертируем (результат)
 
 formResults.classList.add('show');
 
 
 };
 
-export const handleSub = async (e) => {
+export const handleSub = async (e) => { //Конвертация
     e?.preventDefault();
 
     const {url, amount, pair: {from, to} } = state;
@@ -60,3 +60,19 @@ export const handleSub = async (e) => {
         console.log(err)
     }
 }
+
+export const switchCurrencies = () => { //Смена валют на кнопку
+    const {
+      pair: { to, from },
+    } = state;
+  
+    if (!to || !from) return;
+  
+    state.pair = {
+      to: from,
+      from: to,
+    };
+  
+    toSelect.value = from;
+    fromSelect.value = to;
+  };
