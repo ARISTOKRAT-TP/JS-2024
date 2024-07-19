@@ -63,10 +63,10 @@ function counting() {
       }
 
       //вычисляем количество дней, часов, минут и секунд при помощи перевода из миллисекунд 
-      const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-      const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-      const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-      const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+      const days = diff > 0 ? Math.floor((diff-10800000) / 1000 / 60 / 60 / 24) : 0;
+      const hours = diff > 0 ? Math.floor((diff-10800000) / 1000 / 60 / 60) % 24 : 0;
+      const minutes = diff > 0 ? Math.floor((diff-10800000) / 1000 / 60) % 60 : 0;
+      const seconds = diff > 0 ? Math.floor((diff-10800000) / 1000) % 60 : 0;
 
       //устанавливаем количество дней, часов, минут, секунд
       $days.textContent = days < 10 ? '0' + days : days;
